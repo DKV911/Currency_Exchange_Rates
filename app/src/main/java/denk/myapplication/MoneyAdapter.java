@@ -45,19 +45,21 @@ public class MoneyAdapter extends RecyclerView.Adapter<MoneyAdapter.MoneyViewHol
 
     public class MoneyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_full_title, tv_abbreviation, tv_rate;
+        TextView tv_full_title, tv_abbreviation, tv_rate, tv_date;
 
         public MoneyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_full_title = itemView.findViewById(R.id.tv_full_title);
             tv_abbreviation = itemView.findViewById(R.id.tv_abbreviation);
             tv_rate = itemView.findViewById(R.id.tv_rate);
+            tv_date = itemView.findViewById(R.id.tv_date);
         }
 
         public void bind(MoneyResponse item){
             tv_rate.setText(String.valueOf(item.currencyRate));
             tv_abbreviation.setText(item.currencyShortName);
             tv_full_title.setText(item.currencyName);
+            tv_date.setText(item.exchangeDate);
         }
     }
 }
