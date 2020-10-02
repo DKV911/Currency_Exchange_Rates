@@ -32,6 +32,17 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         tools:listitem="@layout/exchange_rate"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_calendar"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
     <FrameLayout
         android:id="@+id/loader"
         android:visibility="visible"
@@ -44,5 +55,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"/>
     </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

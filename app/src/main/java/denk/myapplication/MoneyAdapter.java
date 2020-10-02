@@ -28,9 +28,8 @@ public class MoneyAdapter extends RecyclerView.Adapter<MoneyAdapter.MoneyViewHol
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
         View view = layoutInflater.inflate(layoutId,parent,false);
-        MoneyViewHolder viewHolder = new MoneyViewHolder(view);
 
-        return viewHolder;
+        return new MoneyViewHolder(view);
     }
 
     @Override
@@ -56,7 +55,7 @@ public class MoneyAdapter extends RecyclerView.Adapter<MoneyAdapter.MoneyViewHol
         }
 
         public void bind(MoneyResponse item){
-            tv_rate.setText(String.valueOf(item.currencyRate));
+            tv_rate.setText(item.currencyRate);
             tv_abbreviation.setText(item.currencyShortName);
             tv_full_title.setText(item.currencyName);
             tv_date.setText(item.exchangeDate);
