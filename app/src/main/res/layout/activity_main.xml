@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/ic_baseline_calendar_today_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        android:onClick="showDatePickerDialog"/>
 
     <FrameLayout
         android:id="@+id/loader"

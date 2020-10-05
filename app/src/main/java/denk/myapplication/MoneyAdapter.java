@@ -42,7 +42,7 @@ public class MoneyAdapter extends RecyclerView.Adapter<MoneyAdapter.MoneyViewHol
         return moneyList.size();
     }
 
-    public class MoneyViewHolder extends RecyclerView.ViewHolder {
+    public static class MoneyViewHolder extends RecyclerView.ViewHolder {
 
         TextView tv_full_title, tv_abbreviation, tv_rate, tv_date;
 
